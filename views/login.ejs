@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Birla Institute of Applied Sciences</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="Images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="Images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon_io/favicon-16x16.png"
+  />
+  <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
+</head>
+<body>
+    <div class="background">
+        <div class="img">
+            <img src="Images/Computer login-rafiki.svg">
+        </div>
+        <div class="login">
+            <div class="container">
+                <h1>Login / Register</h1>
+                <div class="data">
+                    <form action="/login" method="post">
+                        <div class="email">
+                            <input type="email" id="email" placeholder="Email" name="username" required>
+                        </div>
+                        <div class="password">
+                            <input type="password" id="password" placeholder="Password" name="password" required>
+                        </div>
+                        <div class="submit">
+                            <!-- <button type="submit">Login</button> -->
+                             <input type="submit" name="submit" value="Login">
+                        </div>
+                    </form>
+                </div>
+                <div class="signup">
+                  <p>If not registered, then</p>
+                  <a href="/signup"><button class="sign">Sign-up</button></a>
+                </div>
+                <div class="sign-in">
+                  <div class="google">
+                    <a href="/auth/google">
+                      <img src="Images/google-logo.svg" alt="#">
+                    </a>
+                  </div>
+                  <div class="github">
+                    <a href="/auth/github">
+                      <img src="Images/github.svg" alt="#">
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

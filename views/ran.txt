@@ -1,0 +1,42 @@
+        <div class="personal">
+            <div>Student's Name : <%= applicationDetail.full_name%></div>
+            <div>Gender : <%= applicationDetail.gender%></div>
+            <div>Father's Name : <%= applicationDetail.fathers_name%></div>
+            <div>Mother's Name : <%= applicationDetail.mothers_name %></div>
+            <div>Date of Birth : <%= applicationDetail.dob %></div>
+            <div>Aadhar No : <%= applicationDetail.aadhar_no %></div>
+            <div>Course : <%= applicationDetail.course %></div>
+            <div>CSE : <%=applicationDetail.cse%> Preference</div>
+            <div>ECE : <%= applicationDetail.ece %> Preference</div>
+        </div>
+
+        <div class="form">
+        <!-- <div class="contact">
+            <div>Email : <%= applicationDetail.email %></div>
+            <div>Contact No : <%= applicationDetail.contact_no %></div>
+            <div>Permanent Address : <%= applicationDetail.permanent_address %></div>
+            <div>Temporary Address : <%= applicationDetail.temporary_address %></div>
+        </div>
+        <div class="10th">
+            <div>English Literature : <%= applicationDetail.eng_10 %></div>
+            <div>Science : <%= applicationDetail.sci_10 %></div>
+            <div>Mathematics : <%= applicationDetail.maths_10%></div>
+            <div>Social Studies : <%= applicationDetail.sst_10 %></div>
+            <div>Hindi : <%= applicationDetail.hindi_10%></div>
+            <div>Percentage <% let sum=applicationDetail.eng_10+applicationDetail.sci_10+applicationDetail.maths_10+applicationDetail.sst_10+applicationDetail.hindi_10 %>
+            <% let percetage=(sum/500) *100%>
+            <%=percetage%>
+            </div>
+        </div>
+        <div class="12th">
+            <div>Physics : <%= applicationDetail.physics_12 %></div>
+            <div>Chemistry : <%= applicationDetail.chemistry_12%></div>
+            <div>Mathematics : <%= applicationDetail.maths_12 %></div>
+            <div>Computer Science / Phy.Ed : <%= applicationDetail.elective_12 %></div>
+            <div>English : <%= applicationDetail.english_12 %></div>
+            <div>Percentage <% let sum12=applicationDetail.physics_12+applicationDetail.chemistry_12+applicationDetail.maths_12+applicationDetail.elective_12+applicationDetail.english_12 %>
+                <% let percetage12=(sum12/500) *100%>
+                <%=percetage12%>
+            </div>
+        </div> -->
+    </div>

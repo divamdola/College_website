@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    user-select: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+body{
+    background-image: url(/Images/img-building.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container{
+    background-color: rgb(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    display: block;
+    box-sizing: border-box;
+}
+.container h2{
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: "David Libre", serif;
+    color: #3a3b3b;
+}
+.form{
+    padding-top: 2rem;
+}
+.form-group{
+    font-family: "Zain", sans-serif;
+    font-size: 1.6rem;
+    display: inline-block;
+}
+.control-label,.input-group{
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+}
+.form-group input,select{
+    width: 300px;
+    font-family: "Zain", sans-serif;
+    font-size: 1.6rem;
+    padding: 5px;
+    border: none;
+    color: #757a79;
+    background-color: #f2f2f2;
+}
+select{
+    cursor: pointer;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1.2rem;
+}
+button{
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: #3a3b3b;
+    color: white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+button:hover{
+    transform: scale(1.1);
+    background-color: #757a79;
+}

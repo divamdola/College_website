@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scrollbar-width: none;
+    user-select: none;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+.header{
+    padding: 1rem;
+    display: flex;
+    font-family: "David Libre", serif;
+    background-image: url(/Images/headerbg.png);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-color: #f2f2f2;
+}
+.header img{
+    width: 110px;
+}
+.institute{
+    margin: auto;
+    text-align: center;
+}
+.institute .main{
+    color: cornflowerblue;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.institute .university{
+    color: rgb(211, 65, 65);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout button{
+    padding: 10px;
+    background-color: #8b8d96;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-family: "zain",serif;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.wel h4{
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "zain",serif;
+    color: #305973;
+}
+.personal{
+    color: #323643;
+    display: inline-block;
+    font-family: "zain",serif;
+    font-size: 2rem;
+}
+.form{
+    padding: 0rem 3rem 3rem 3rem;
+}
+.form legend{
+    font-size: 3rem;
+    color: #305973;
+    font-family: "zain",serif;
+}
+fieldset{
+    margin-top: 3rem;
+    border: 2px solid #9e9c9c;
+    border-radius: 2rem;
+    background-color: #f2f2f2;
+}
+.form fieldset .content{
+    padding: 2rem;
+}
+.form fieldset .content .name{
+    color: #323643;
+    display: inline-block;
+    font-family: "zain",serif;
+    font-size: 2rem;
+    padding: 2rem;
+}
+.form input[type=text],.form input[type=number],.form input[type=email],.form input[type=date]{
+    padding: 5px;
+    font-family: "zain",serif;
+    font-size: 24px;
+    color: #606470;
+    width: 300px;
+}
+.form input[type=radio]{
+    width: 25px;
+}
+.form select{
+    text-align: center;
+    font-family: "zain",serif;
+    padding: 5px;
+    font-size: 24px;
+    color: #606470;
+    width: 300px;
+}
+.marks{
+    display: inline-block;
+    padding: 2rem;
+}
+.form .name.preference input{
+    text-align: center;
+    width: 50px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+.button{
+    font-size: 24px;
+    padding: 1rem 2rem 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    color: #323643;
+    font-weight: bold;
+    font-family: "zain",serif;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.button:hover{
+    transform: scale(1.1);
+    background-color: #588dad;
+    color: white;
+}

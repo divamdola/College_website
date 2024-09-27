@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=locals.applicationDetail.full_name%> | Application Form</title>
+    <link rel="stylesheet" href="styles/application.css">
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="Images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="Images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon_io/favicon-16x16.png"
+  />
+  <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
+</head>
+<body>
+    <div class="header">
+      <div class="logo">
+        <div class="logout">
+          <a href="/logout">
+            <button>Logout</button>
+          </a>
+        </div>
+        <img src="Images/bias-removebg-preview.png">
+    </div>
+        <div class="institute">
+            <div class="main">
+                Birla Institue of Applied Sciences
+            </div>
+            <div class="university">
+                Veer Madho Singh Bhandari Uttarakhand Technical University
+            </div>
+        </div>
+    </div>
+    <div class="wel">
+        <h4>Application Form</h4>
+    </div>
+    <div class="form">
+        <form>
+          <fieldset>
+            <legend>Personal Details</legend>
+            <div class="content">
+              <div class="name">
+                <h4>Full Name :</h4>
+                <%let full_name= applicationDetail.full_name%>
+                <input type="text" name="full_name" value= "<%= applicationDetail.full_name.toUpperCase()%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Gender :</h4>
+                <input type="text" name="gender" value= "<%= applicationDetail.gender.toUpperCase()%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Father's Name :</h4>
+                <input type="text" name="fathers_name" value= "<%= applicationDetail.fathers_name.toUpperCase()%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Mothers Name :</h4>
+                <input type="text" name="mothers_name" value="<%=applicationDetail.mothers_name.toUpperCase()%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Date of Birth</h4>
+                <input type="date" name="dob" value= "<%=applicationDetail.dob ? new Date(applicationDetail.dob).toLocaleDateString('en-CA') : '' %>" disabled>
+              </div>
+              <div class="name">
+                <h4>Aadhar No :</h4>
+                <input type="number" name="aadhar" value= "<%= applicationDetail.aadhar_no%>" disabled>
+              </div>
+              <div class="name dropdown">
+                <h4>Course :</h4>
+                <input type="text" name="course" value= "<%= applicationDetail.course%>" disabled>
+              </div>
+              <div class="name preference">
+                <h4>Preferences :</h4>
+                <div style="display: flex; align-items: center; gap: 3rem;">
+                  <div class="cse">
+                    <h4>CSE</h4>
+                    <input type="number" name="cse" value=<%= applicationDetail.cse%> disabled>
+                  </div>
+                  <div class="ece">
+                    <h4>ECE</h4>
+                    <input type="number" name="ece" value=<%= applicationDetail.ece%> disabled>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Contact Details</legend>
+            <div class="content">
+              <div class="name">
+                <h4>Email :</h4>
+                <input type="email" name="email" value= "<%= applicationDetail.email%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Contact No :</h4>
+                <input type="number" name="phone_no" value= "<%= applicationDetail.contact_no%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Permanent Address :</h4>
+                <input type="text" name="permanent_address" value= "<%= applicationDetail.permanent_address%>" disabled>
+              </div>
+              <div class="name">
+                <h4>Temporary Address :</h4>
+                <input type="text" name="temporary_address" value= "<%= applicationDetail.temporary_address%>" disabled>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Education Details</legend>
+            <div class="content">
+              <div class="name">
+                <h4>High School Marks :</h4>
+                <div class="marks">
+                  <h4>English :</h4>
+                  <input type="number" name="eng_10" value= "<%= applicationDetail.eng_10%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Science :</h3>
+                  <input type="number" name="sci_10" value= "<%= applicationDetail.sci_10%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Maths :</h4>
+                  <input type="number" name="maths_10" value= "<%= applicationDetail.maths_10%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Social Science :</h4>
+                  <input type="number" name="sst_10" value= "<%= applicationDetail.sst_10%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Hindi :</h4>
+                  <input type="number" name="hindi_10" value= "<%= applicationDetail.hindi_10%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Percentage</h4>
+                  <input type="number" name="percentage_10" <% let sum=applicationDetail.eng_10+applicationDetail.sci_10+applicationDetail.maths_10+applicationDetail.sst_10+applicationDetail.hindi_10 %>
+                  <% let percentage=(sum/500) *100%>
+                  value="<%=percentage%>" disabled>
+                </div>
+              </div>
+              <div class="name">
+                <h4>Senior Secondary Marks :</h4>
+                <div class="marks">
+                  <h4>Physics :</h4>
+                  <input type="number" name="physics_12" value= "<%= applicationDetail.physics_12%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Chemistry :</h3>
+                  <input type="number" name="chemistry_12" value= "<%= applicationDetail.chemistry_12%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Mathematics :</h4>
+                  <input type="number" name="maths_12" value= "<%= applicationDetail.maths_12%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>English :</h4>
+                  <input type="number" name="english_12" value= "<%= applicationDetail.english_12%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Computer Sci/Physical Ed :</h3>
+                  <input type="number" name="elective_12" value= "<%= applicationDetail.elective_12%>" disabled>
+                </div>
+                <div class="marks">
+                  <h4>Percentage</h4>
+                  <input type="number" name="percentage_12" <% let sum12=applicationDetail.physics_12+applicationDetail.chemistry_12+applicationDetail.maths_12+applicationDetail.elective_12+applicationDetail.english_12 %>
+                  <% let percentage12=(sum12/500) *100%>
+                  value="<%=percentage12%>" disabled>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp | Birla Institue of Applied Sciences</title>
+    <link rel="stylesheet" href="styles/signup.css">
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="Images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="Images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon_io/favicon-16x16.png"
+  />
+  <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
+</head>
+<body>
+        <div class="container">
+            <form class="well form-horizontal" action="/signup" method="post"  id="contact_form">
+                <!-- Form Name -->
+                 <h2><b>Registration Form</b></h2>
+                 <!-- Text input-->
+                 <div class="form">
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">First Name</label>
+                            <div class="input-group">
+                                <input  name="first_name" placeholder="First Name" class="form-control"  type="text" required>
+                            </div>
+                    </div>
+                    <!-- Text input-->
+                     <div class="form-group">
+                        <label class="col-md-4 control-label" >Last Name</label>
+                            <div class="input-group">
+                                <input name="last_name" placeholder="Last Name" class="form-control"  type="text" required>
+                            </div>
+                    </div>
+            
+                <!-- Text input-->
+            
+                <div class="form-group">
+                    <label class="col-md-4 control-label" >Password</label>
+                        <div class="input-group">
+                            <input name="user_password" placeholder="Password" class="form-control"  type="password" required>
+                        </div>
+                </div>
+            
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-4 control-label">E-Mail</label>
+                        <div class="input-group">
+                            <input name="user_email" placeholder="E-Mail Address" class="form-control"  type="email" required>
+                        </div>
+                </div>
+            
+            
+                <!-- Text input-->
+                   
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Contact No.</label>
+                        <div class="input-group">
+                            <input name="contact_no" placeholder="(+91)" class="form-control" type="number" required>
+                        </div>
+                </div>
+                <!-- Button -->
+                    <div class="submit">
+                        <button type="submit" class="btn btn-warning" >SUBMIT</button>
+                    </div>
+                </div>
+        
+        </form>
+        </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User | Birla Institute of Applied Sciences</title>
+  <link rel="stylesheet" href="styles/admin.css">
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="Images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="Images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon_io/favicon-16x16.png"
+  />
+  <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>Hey! Admin</h1>
+      <h2>Welcome to <strong>Birla Institute of Applied Sciences</strong></h2>
+    </div>
+    <div>
+      <div class="logout">
+        <a href="/logout">
+          <button>Logout</button>
+        </a>
+      </div>
+      <img src="Images/bias-removebg-preview.png" alt="">
+    </div>
+  </div>
+    <div class="message">
+      <p>Please Approve the pending applications !!!</p>
+    </div>
+    <div class="student-table">
+      <table>
+          <thead>
+              <tr>
+                  <th>Student Name</th>
+                  <th>Email</th>
+                  <th>Father's Name</th>
+                  <th>10th Percentage</th>
+                  <th>12th Percentage</th>
+                  <th>Course</th>
+                  <th>Preferences</th>
+                  <th>Approve</th>
+                  <th>Decline</th>
+              </tr>
+          </thead>
+          <tbody>
+              <% for (let i = 0; i < locals.student.length; i++) { %>
+                  <tr>
+                      <td><%= student[i].full_name %></td>
+                      <td><%= student[i].email %></td>
+                      <td><%= student[i].fathers_name %></td>
+                      <td>
+                          <% let sum = student[i].eng_10 + student[i].sci_10 + student[i].maths_10 + student[i].sst_10 + student[i].hindi_10; %>
+                          <% let percentage = (sum / 500) * 100; %>
+                          <%= percentage.toFixed(2) %> %
+                      </td>
+                      <td>
+                          <% let sum12 = student[i].physics_12 + student[i].chemistry_12 + student[i].maths_12 + student[i].elective_12 + student[i].english_12; %>
+                          <% let percentage12 = (sum12 / 500) * 100; %>
+                          <%= percentage12.toFixed(2) %> %
+                      </td>
+                      <td><%= student[i].course %></td>
+                      <td>
+                          <% if (student[i].course === "BTech") { %>
+                              <% if (student[i].cse === 1) { %>
+                                  CSE, ECE
+                              <% } else { %>
+                                  ECE, CSE
+                              <% } %>
+                          <% } %>
+                      </td>
+                      <td>
+                        <img src="Images/tick.svg" alt="Approve" class="approve" data-id="<%= student[i].email %>">
+                    </td>
+                    <td>
+                        <img src="Images/wrong.svg" alt="Decline" class="decline" data-id="<%= student[i].email %>">
+                    </td>
+                  </tr>
+              <% } %>
+          </tbody>
+      </table>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.approve').on('click', function() {
+            const studentId = $(this).data('id');
+            $.ajax({
+                url: '/approve',
+                method: 'POST',
+                data: { id: studentId },
+                success: function(response) {
+                    alert('Application approved!');
+                },
+                error: function(xhr) {
+                    alert('Error approving application: ' + xhr.responseText);
+                }
+            });
+        });
+
+        $('.decline').on('click', function() {
+            const studentId = $(this).data('id');
+            $.ajax({
+                url: '/decline',
+                method: 'POST',
+                data: { id: studentId },
+                success: function(response) {
+                    alert('Application declined!');
+                },
+                error: function(xhr) {
+                    alert('Error declining application: ' + xhr.responseText);
+                }
+            });
+        });
+    });
+</script>
+</html>

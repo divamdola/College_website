@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User | Birla Institute of Applied Sciences</title>
+  <link rel="stylesheet" href="styles/users.css">
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="Images/favicon_io/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="Images/favicon_io/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon_io/favicon-16x16.png"
+  />
+  <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>Hey! User</h1>
+      <h2>Welcome to <strong>Birla Institute of Applied Sciences</strong></h2>
+    </div>
+    <div>
+      <div class="logout">
+        <a href="/logout">
+          <button>Logout</button>
+        </a>
+      </div>
+      <img src="Images/bias-removebg-preview.png" alt="">
+    </div>
+  </div>
+  <%if(locals.isApproved){%>
+    <div class="message">
+      <p>Congrats !! You are approved, for further completion of your application please Deposit advance Fees</p>
+    </div>
+  <% }else{%>
+    <%  if(isRegistered){ %>
+      <div class="message">
+        <p>You are already registered, Please wait for approval!!!</p>
+      </div>
+      <div class="application">
+        <div>
+          <p>Student Name : <%=userDetails.full_name%></p>
+        </div>
+        <div>
+          <p>Email : <%=userDetails.email%></p>
+        </div>
+        <div>
+          <p>Father's Name : <%=userDetails.fathers_name%></p>
+        </div>
+        <div>
+          <a href="/application">
+            <img src="Images/eye.svg" alt="#">
+          </a>
+        </div>
+      </div>
+      <% }else{ %>
+        <div class="welcome">
+          <h2>Application form</h2>
+        </div>
+        <div class="form">
+          <form action="/registration" method="post">
+            <fieldset>
+              <legend>Personal Details</legend>
+              <div class="content">
+                <div class="name">
+                  <h4>Full Name :</h4>
+                  <input type="text" name="full_name">
+                </div>
+                <div class="name">
+                  <label for="gender">Gender : </label>
+                  <label for="choice1">Male</label>
+                  <input type="radio" value="male" name="gender" id="choice1">
+                  <label for="choice2">Female</label>
+                  <input type="radio" name="gender" value="female" id="choice2">
+                  <label for="choice3">Others</label>
+                  <input type="radio" name="gender" value="others" id="choice3">
+                </div>
+                <div class="name">
+                  <h4>Father's Name :</h4>
+                  <input type="text" name="fathers_name">
+                </div>
+                <div class="name">
+                  <h4>Mothers Name :</h4>
+                  <input type="text" name="mothers_name">
+                </div>
+                <div class="name">
+                  <h4>Date of Birth</h4>
+                  <input type="date" name="dob">
+                </div>
+                <div class="name">
+                  <h4>Aadhar No :</h4>
+                  <input type="number" name="aadhar">
+                </div>
+                <div class="name dropdown">
+                  <label for="courses"><h4>Choose Your Course :</h4></label>
+                  <select name="courses">
+                    <option value="none">---Select---</option>
+                    <option value="BTech">BTech</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
+                  </select>
+                </div>
+                <div class="name preference">
+                  <h4>Preferences :</h4>
+                  <div style="display: flex; align-items: center; gap: 3rem;">
+                    <div class="cse">
+                      <h4>CSE</h4>
+                      <input type="number" name="cse">
+                    </div>
+                    <div class="ece">
+                      <h4>ECE</h4>
+                      <input type="number" name="ece">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Contact Details</legend>
+              <div class="content">
+                <div class="name">
+                  <h4>Email :</h4>
+                  <input type="email" name="email">
+                </div>
+                <div class="name">
+                  <h4>Contact No :</h4>
+                  <input type="number" name="phone_no">
+                </div>
+                <div class="name">
+                  <h4>Permanent Address :</h4>
+                  <input type="text" name="permanent_address">
+                </div>
+                <div class="name">
+                  <h4>Temporary Address :</h4>
+                  <input type="text" name="temporary_address">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Education Details</legend>
+              <div class="content">
+                <div class="name">
+                  <h4>High School Marks :</h4>
+                  <div class="marks">
+                    <h4>English :</h4>
+                    <input type="number" name="eng_10">
+                  </div>
+                  <div class="marks">
+                    <h4>Science :</h3>
+                    <input type="number" name="sci_10">
+                  </div>
+                  <div class="marks">
+                    <h4>Maths :</h4>
+                    <input type="number" name="maths_10">
+                  </div>
+                  <div class="marks">
+                    <h4>Social Science :</h4>
+                    <input type="number" name="sst_10">
+                  </div>
+                  <div class="marks">
+                    <h4>Hindi :</h4>
+                    <input type="number" name="hindi_10">
+                  </div>
+                </div>
+                <div class="name">
+                  <h4>Senior Secondary Marks :</h4>
+                  <div class="marks">
+                    <h4>Physics :</h4>
+                    <input type="number" name="physics_12">
+                  </div>
+                  <div class="marks">
+                    <h4>Chemistry :</h3>
+                    <input type="number" name="chemistry_12">
+                  </div>
+                  <div class="marks">
+                    <h4>Mathematics :</h4>
+                    <input type="number" name="maths_12">
+                  </div>
+                  <div class="marks">
+                    <h4>English :</h4>
+                    <input type="number" name="english_12">
+                  </div>
+                  <div class="marks">
+                    <h4>Computer Sci/Physical Ed :</h3>
+                    <input type="number" name="elective_12">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="submit">
+              <input type="submit" value="Register" class="button">
+            </div>
+          </form>
+        </div>
+        <% } %>
+  <%} %>
+</body>
+</html>

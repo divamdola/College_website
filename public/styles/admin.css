@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Inter:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    user-select: none;
+    scrollbar-width: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background-color: #f2f2f2;
+}
+.header h1{
+    font-family: "Poopins", serif;
+    font-size: 4rem;
+    background: -webkit-linear-gradient(#1e56a0, #305973);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.header h2{
+    font-family: "David Libre", serif;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+.header h2 strong{
+    color: #1e56a0;
+}
+.header img{
+    padding-top: 2rem;
+    width: 150px;
+    filter: drop-shadow(0 0 0.75rem #1e56a0);
+}
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logout button{
+    padding: 10px;
+    background-color: #8b8d96;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-family: "zain",serif;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.welcome{
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "zain",serif;
+    color: #305973;
+}
+.message p{
+    padding: 3rem;
+    font-family: "zain",serif;
+    font-size: 2rem;
+}
+.student-table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #305973;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tbody tr{
+    cursor: pointer;
+    transition: 0.5s;
+}
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+th {
+    font-size: 1.1rem;
+    font-family: "Poppins",serif;
+}
+
+td {
+    font-size: 1.1rem;
+    font-family: "zain",serif;
+}
+td img{
+    width: 30px;
+    transition: 0.5s;
+}
+td img:hover{
+    transform: scale(1.1);
+}
