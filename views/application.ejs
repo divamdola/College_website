@@ -62,11 +62,11 @@
               </div>
               <div class="name">
                 <h4>Father's Name :</h4>
-                <input type="text" name="fathers_name" value= "<%= applicationDetail.fathers_name.toUpperCase()%>" disabled>
+                <input type="text" name="fathers_name" value= "<%= applicationDetail.f_name.toUpperCase()%>" disabled>
               </div>
               <div class="name">
                 <h4>Mothers Name :</h4>
-                <input type="text" name="mothers_name" value="<%=applicationDetail.mothers_name.toUpperCase()%>" disabled>
+                <input type="text" name="mothers_name" value="<%=applicationDetail.m_name.toUpperCase()%>" disabled>
               </div>
               <div class="name">
                 <h4>Date of Birth</h4>
@@ -74,25 +74,27 @@
               </div>
               <div class="name">
                 <h4>Aadhar No :</h4>
-                <input type="number" name="aadhar" value= "<%= applicationDetail.aadhar_no%>" disabled>
+                <input type="number" name="aadhar" value= "<%= applicationDetail.aadhar%>" disabled>
               </div>
               <div class="name dropdown">
                 <h4>Course :</h4>
                 <input type="text" name="course" value= "<%= applicationDetail.course%>" disabled>
               </div>
-              <div class="name preference">
-                <h4>Preferences :</h4>
-                <div style="display: flex; align-items: center; gap: 3rem;">
-                  <div class="cse">
-                    <h4>CSE</h4>
-                    <input type="number" name="cse" value=<%= applicationDetail.cse%> disabled>
-                  </div>
-                  <div class="ece">
-                    <h4>ECE</h4>
-                    <input type="number" name="ece" value=<%= applicationDetail.ece%> disabled>
+              <% if(applicationDetail.course==='BTech') {%>
+                <div class="name preference">
+                  <h4>Preferences :</h4>
+                  <div style="display: flex; align-items: center; gap: 3rem;">
+                    <div class="cse">
+                      <h4>CSE</h4>
+                      <input type="number" name="cse" value=<%= applicationDetail.cse%> disabled>
+                    </div>
+                    <div class="ece">
+                      <h4>ECE</h4>
+                      <input type="number" name="ece" value=<%= applicationDetail.ece%> disabled>
+                    </div>
                   </div>
                 </div>
-              </div>
+                <% } %>
             </div>
           </fieldset>
           <fieldset>
@@ -104,15 +106,15 @@
               </div>
               <div class="name">
                 <h4>Contact No :</h4>
-                <input type="number" name="phone_no" value= "<%= applicationDetail.contact_no%>" disabled>
+                <input type="number" name="phone_no" value= "<%= applicationDetail.phone_no%>" disabled>
               </div>
               <div class="name">
                 <h4>Permanent Address :</h4>
-                <input type="text" name="permanent_address" value= "<%= applicationDetail.permanent_address%>" disabled>
+                <input type="text" name="permanent_address" value= "<%= applicationDetail.permanent_add%>" disabled>
               </div>
               <div class="name">
                 <h4>Temporary Address :</h4>
-                <input type="text" name="temporary_address" value= "<%= applicationDetail.temporary_address%>" disabled>
+                <input type="text" name="temporary_address" value= "<%= applicationDetail.temporary_add%>" disabled>
               </div>
             </div>
           </fieldset>
@@ -156,7 +158,7 @@
                 </div>
                 <div class="marks">
                   <h4>Chemistry :</h3>
-                  <input type="number" name="chemistry_12" value= "<%= applicationDetail.chemistry_12%>" disabled>
+                  <input type="number" name="chemistry_12" value= "<%= applicationDetail.chem_12%>" disabled>
                 </div>
                 <div class="marks">
                   <h4>Mathematics :</h4>
@@ -172,7 +174,7 @@
                 </div>
                 <div class="marks">
                   <h4>Percentage</h4>
-                  <input type="number" name="percentage_12" <% let sum12=applicationDetail.physics_12+applicationDetail.chemistry_12+applicationDetail.maths_12+applicationDetail.elective_12+applicationDetail.english_12 %>
+                  <input type="number" name="percentage_12" <% let sum12=applicationDetail.physics_12+applicationDetail.chem_12+applicationDetail.maths_12+applicationDetail.elective_12+applicationDetail.english_12 %>
                   <% let percentage12=(sum12/500) *100%>
                   value="<%=percentage12%>" disabled>
                 </div>
