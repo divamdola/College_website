@@ -75,11 +75,7 @@ h1 {
   filter: drop-shadow(0 0 0.75rem #656b72a1);
 }
 .signup{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "Zain", sans-serif;
-    gap: 1rem;
     padding-top: 2rem;
     font-size: 1.5rem;
 }
@@ -113,7 +109,7 @@ h1 {
 .sign-in img:hover{
     transform: scale(1.1);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 980px) {
   body {
     background-color: #656b7263;
   }
@@ -127,7 +123,7 @@ h1 {
   }
   .background .login {
     position: relative;
-    height: 200px;
+    height: 240px;
     width: 180px;
     top: 70px;
     left: 265px;
@@ -145,6 +141,17 @@ h1 {
     padding: 5px;
     padding-left: 10px;
     font-size: 16px;
+  }
+  .signup,.sign{
+    padding-top: 4px;
+    font-size: 10px;
+  }
+  .sign-in{
+    padding-top: 4px;
+    gap: 8px;
+  }
+  .sign-in img{
+    width: 15px;
   }
   .data button {
     width: 150px;

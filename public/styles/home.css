@@ -286,6 +286,19 @@ video{
     }
 }
 @media screen and (max-width : 757px) {
+    .navbar{
+        height: 48px;
+    }
+    .navbar a{
+        font-size: 22px;
+    }
+    .submenu{
+        top: 178px;
+        min-width: 168px;
+    }
+    .submenu a{
+        font-size: 22px;
+    }
     .institute .main{
         font-size: 1.5rem;
     }
@@ -337,7 +350,15 @@ video{
         font-size: 10px;
     }
     .navbar{
+        height: 35px;
         padding: 10px 2rem 10px 2rem;
+    }
+    .submenu{
+        top: 134px;
+        min-width: 97px;
+    }
+    .submenu a{
+        font-size: 18px;
     }
     .head{
         font-size: 2rem;
