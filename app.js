@@ -2,9 +2,9 @@ import express from "express";
 const app= new express();
 const port =3000;
 
-app.get("/",(req,res)=>{
-  res.render("home.ejs");
-})
+app.get('/test', (req, res) => {
+  res.send('Test route working!');
+});
 
 app.listen(port,()=>{
   console.log("app is listening");
