@@ -1,21 +1,21 @@
-import bodyParser from "body-parser";
-import express from "express";
+// import bodyParser from "body-parser";
+// import express from "express";
 
-const app= new express();
-const port =3000;
+// const app= new express();
+// const port =3000;
 
-app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views')); // Adjust the path as necessary
+// app.use(bodyParser.urlencoded({extended:true}));
+// app.use(express.static("public"));
+// app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views')); // Adjust the path as necessary
 
-app.get('/test', (req, res) => {
-  res.send('Test route working!');
-});
+// app.get('/test', (req, res) => {
+//   res.send('Test route working!');
+// });
 
-app.listen(port,()=>{
-  console.log("app is listening");
-});
+// app.listen(port,()=>{
+//   console.log("app is listening");
+// });
 
 // import bcrypt from "bcrypt";
 // import bodyParser from "body-parser";
