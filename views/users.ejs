@@ -25,18 +25,20 @@
   <link rel="manifest" href="Images/favicon_io/site.webmanifest" />
 </head>
 <body>
-  <div class="header">
-    <div>
-      <h1>Hey! User</h1>
-      <h2>Welcome to <strong>Birla Institute of Applied Sciences</strong></h2>
-    </div>
-    <div>
-      <div class="logout">
-        <a href="/logout">
-          <button>Logout</button>
-        </a>
+  <div class="head">
+    <div class="header">
+      <div>
+        <h1>Hey! User</h1>
+        <h2>Welcome to <strong>Birla Institute of Applied Sciences</strong></h2>
       </div>
-      <img src="Images/bias-removebg-preview.png" alt="">
+      <div>
+        <img src="Images/bias-removebg-preview.png" alt="">
+      </div>
+    </div>
+    <div class="logout">
+      <a href="/logout">
+        <button>Logout</button>
+      </a>
     </div>
   </div>
   <%if(locals.isApproved){%>
@@ -69,6 +71,30 @@
                 <img src="Images/eye.svg" alt="#">
               </a>
             </div>
+          </div>
+          <div class="student-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Email</th>
+                        <th>Father's Name</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                      <tr>
+                            <td><%= result.full_name %></td>
+                            <td><%= result.email %></td>
+                            <td><%= result.f_name %></td>
+                            <td>
+                              <a href="/application">
+                                <img src="Images/eye.svg" alt="#">
+                              </a>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
           </div>
           <%}else{%>
             <div class="welcome">

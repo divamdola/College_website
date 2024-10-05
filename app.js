@@ -8,10 +8,10 @@ import passport from "passport";
 import GoogleStratergy from "passport-google-oauth20";
 import { Strategy } from "passport-local";
 
-const app=new express();
-const port=3000;
-const saltRounds=10;
 env.config();
+const app=new express();
+const port=process.env.PORT || 3000;
+const saltRounds=10;
 const uri=process.env.MD_URI;
 
 //middlewares

@@ -36,12 +36,14 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0;
 }
+.head{
+    background-color: #f2f2f2;
+}
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem;
-    background-color: #f2f2f2;
 }
 .header h1{
     font-family: "Poopins", serif;
@@ -59,7 +61,6 @@ input[type=number]::-webkit-outer-spin-button {
     color: #1e56a0;
 }
 .header img{
-    padding-top: 2rem;
     width: 150px;
     filter: drop-shadow(0 0 0.75rem #1e56a0);
 }
@@ -67,6 +68,7 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
 }
 .logout button{
     padding: 10px;
@@ -156,4 +158,165 @@ fieldset{
 .form .name.preference input{
     text-align: center;
     width: 50px;
+}
+.student-table {
+    display: none;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #f2f2f2;
+    color: #305973;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tbody tr{
+    cursor: pointer;
+    transition: 0.5s;
+}
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+th {
+    font-size: 1.1rem;
+    font-family: "Poppins",serif;
+}
+
+td {
+    font-size: 1.1rem;
+    font-family: "zain",serif;
+}
+td img{
+    width: 30px;
+    transition: 0.5s;
+}
+td img:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:890px) {
+    .header{
+        padding: 2rem;
+    }
+    .header h1{
+        font-size: 3rem;
+    }
+    .header h2{
+        font-size: 26px;
+    }
+    .header img{
+        width: 140px;
+    }
+    .logout button{
+        font-size: 18px;
+    }
+    .message p{
+        font-size: 25px;
+    }
+    .application{
+        padding: 2rem;
+        font-size: 14px;
+    }
+    .application img{
+        width: 25px;
+    }
+}
+@media screen and (max-width:742px) {
+    .header img{
+        width: 110px;
+    }
+    .header h1{
+        font-size: 50px;
+    }
+    .header h2{
+        font-size: 20px;
+    }
+    .message p{
+        font-size: 20px;
+    }
+    .application{
+        padding: 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .header h1{
+        font-size: 40px;
+    }
+    .header h2{
+        font-size: 18px;
+    }
+    .header{
+        padding-top: 10px;
+    }
+    .logout button{
+        padding: 6px;
+        font-size: 16px;
+    }
+    .logout{
+        padding-bottom: 1rem;
+    }
+    .message p{
+        padding: 2rem;
+    }
+    .application{
+        padding: 10px;
+        gap: 2rem;
+        font-size: 10px;
+    }
+    .application img{
+        width: 20px;
+    }
+}
+@media screen and (max-width:400px) {
+    .header h1{
+        font-size: 30px;
+    }
+    .header{
+        padding-bottom: 10px;
+    }
+    .header h2{
+        padding-top: 1rem;
+        font-size: 15px;
+    }
+    .header img{
+        width: 95px;
+    }
+    .message p{
+        font-size: 17px;
+    }
+    .application{
+        display: none;
+    }
+    .student-table{
+        display: contents;
+    }
+    th{
+        text-align: center;
+        font-size: 10px;
+    }
+    td{
+        text-align: center;
+        font-size: 13px;
+    }
+    td img{
+        width: 20px;
+    }
+    table{
+        border: none;
+    }
 }
