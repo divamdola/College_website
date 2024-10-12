@@ -15,37 +15,39 @@ input[type=number]::-webkit-outer-spin-button {
     appearance: none;
     margin: 0;
 }
-.header{
-    padding: 1rem;
-    display: flex;
-    font-family: "David Libre", serif;
-    background-image: url(/Images/headerbg.png);
-    background-repeat: no-repeat;
-    background-position: 100%;
+.head{
     background-color: #f2f2f2;
 }
-.header img{
-    width: 110px;
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
 }
-.institute{
-    margin: auto;
-    text-align: center;
+.header h1{
+    font-family: "Poopins", serif;
+    font-size: 4rem;
+    background: -webkit-linear-gradient(#1e56a0, #305973);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-.institute .main{
-    color: cornflowerblue;
+.header h2{
+    font-family: "David Libre", serif;
     font-size: 2rem;
-    font-weight: bold;
+    padding-top: 2rem;
 }
-.institute .university{
-    color: rgb(211, 65, 65);
-    font-weight: bold;
-    font-size: 1.3rem;
-    padding-top: 1rem;
+.header h2 strong{
+    color: #1e56a0;
+}
+.header img{
+    width: 150px;
+    filter: drop-shadow(0 0 0.75rem #1e56a0);
 }
 .logout{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 2rem;
 }
 .logout button{
     padding: 10px;
@@ -141,4 +143,221 @@ fieldset{
     transform: scale(1.1);
     background-color: #588dad;
     color: white;
+}
+@media screen and (max-width:890px) {
+    .form fieldset .content .name{
+        font-size: 24px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 230px;
+        font-size: 20px;
+    }
+    .form select{
+        width: 230px;
+        font-size: 20px;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .header h1{
+        font-size: 3rem;
+    }
+    .header h2{
+        font-size: 26px;
+    }
+    .header img{
+        width: 140px;
+    }
+    .logout button{
+        font-size: 18px;
+    }
+    .message p{
+        font-size: 25px;
+    }
+    .application{
+        padding: 2rem;
+        font-size: 14px;
+    }
+    .application img{
+        width: 25px;
+    }
+}
+@media screen and (max-width:742px) {
+    .header img{
+        width: 110px;
+    }
+    .header h1{
+        font-size: 50px;
+    }
+    .header h2{
+        font-size: 20px;
+    }
+    .message p{
+        font-size: 20px;
+    }
+    .application{
+        padding: 1rem;
+    }
+}
+@media screen and (max-width:600px) {
+    .welcome{
+        padding-top: 2rem;
+    }
+    fieldset{
+        margin-top: 1rem;
+    }
+    .form{
+        padding: 0rem 2rem 2rem 2rem;
+    }
+    .form legend{
+        font-size: 30px;
+    }
+    .form fieldset .content .name{
+        padding: 10px;
+        font-size: 20px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 185px;
+        font-size: 16px;
+    }
+    .form fieldset .content .name .marks{
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .form .name.preference input{
+        width: 35px;
+    }
+    .options{
+        gap: 1rem;
+    }
+    .marks input[type=number]{
+        width: 90px;
+    }
+    .button{
+        font-size: 20px;
+        padding: 1rem;
+    }
+    .submit{
+        padding-top: 1rem;
+    }
+    .form select{
+        width: 185px;
+        font-size: 16px;
+    }
+    .header h1{
+        font-size: 40px;
+    }
+    .header h2{
+        font-size: 18px;
+    }
+    .header{
+        padding-top: 10px;
+    }
+    .welcome h2{
+        font-size: 24px;
+    }
+    .logout button{
+        padding: 6px;
+        font-size: 16px;
+    }
+    .logout{
+        padding-bottom: 1rem;
+    }
+    .message p{
+        padding: 2rem;
+    }
+    .application{
+        padding: 10px;
+        gap: 2rem;
+        font-size: 10px;
+    }
+    .application img{
+        width: 20px;
+    }
+}
+@media screen and (max-width:400px) {
+    .form legend{
+        font-size: 24px;
+    }
+    .form fieldset .content{
+        padding: 1rem;
+    }
+    .form fieldset .content .name{
+        font-size: 16px;
+    }
+    .form fieldset .content .name .marks{
+        font-size: 16px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 124px;
+        font-size: 12px;
+    }
+    .form select{
+        width: 124px;
+        font-size: 12px;
+    }
+    .form .name.preference input{
+        width: 30px;
+    }
+    .marks input[type=number]{
+        width: 68px;
+    }
+    .header h1{
+        font-size: 30px;
+    }
+    .header{
+        padding-bottom: 10px;
+    }
+    .button{
+        font-size: 16px;
+        padding: 10px;
+    }
+    .header h2{
+        padding-top: 1rem;
+        font-size: 15px;
+    }
+    .header img{
+        width: 95px;
+    }
+    .message p{
+        font-size: 17px;
+    }
+    .application{
+        display: none;
+    }
+    .student-table{
+        display: contents;
+    }
+    th{
+        text-align: center;
+        font-size: 10px;
+    }
+    td{
+        text-align: center;
+        font-size: 13px;
+    }
+    td img{
+        width: 20px;
+    }
+    table{
+        border: none;
+    }
+}
+@media screen and (max-width:390px) {
+    .form{
+        padding: 0rem 1rem 1rem 1rem;
+    }
+    .form legend{
+        font-size: 24px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 135px;
+    }
+    .form fieldset .content .name{
+        font-size: 18px;
+    }
+    .marks input[type=number]{
+        width: 76px;
+    }
 }
