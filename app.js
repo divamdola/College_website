@@ -32,7 +32,7 @@ app.use(passport.session());
 
 // Database Connection
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(uri)
     .then(() => {
         console.log('Connected to MongoDB');
     })
@@ -123,7 +123,7 @@ app.get("/application",async(req,res)=>{
 app.get("/users", async(req, res) => {
     const email=req.user.email;
     if(req.isAuthenticated()){
-        const result=await Student_register.findOne({email:email});
+        let result=await Student_register.findOne({email:email});
         let isApproved=false;
         let isRegistered=false;
         if(result!=null){
@@ -135,6 +135,7 @@ app.get("/users", async(req, res) => {
             res.render("users.ejs",{isRegistered:isRegistered,result:result,isApproved:isApproved});
           }
         }else{
+          result=await Signup.findOne({email:email})
           res.render("users.ejs",{isRegistered:isRegistered,result:result,isApproved:isApproved});
         }
     }else{

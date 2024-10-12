@@ -95,6 +95,11 @@ input[type=number]::-webkit-outer-spin-button {
     color: #305973;
     font-family: "zain",serif;
 }
+.options{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
 fieldset{
     margin-top: 3rem;
     border: 2px solid #9e9c9c;
@@ -210,6 +215,17 @@ td img:hover{
 }
 
 @media screen and (max-width:890px) {
+    .form fieldset .content .name{
+        font-size: 24px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 230px;
+        font-size: 20px;
+    }
+    .form select{
+        width: 230px;
+        font-size: 20px;
+    }
     .header{
         padding: 2rem;
     }
@@ -254,6 +270,51 @@ td img:hover{
     }
 }
 @media screen and (max-width:600px) {
+    .welcome{
+        padding-top: 2rem;
+    }
+    fieldset{
+        margin-top: 1rem;
+    }
+    .form{
+        padding: 0rem 2rem 2rem 2rem;
+    }
+    .form legend{
+        font-size: 30px;
+    }
+    .form fieldset .content .name{
+        padding: 10px;
+        font-size: 20px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 185px;
+        font-size: 16px;
+    }
+    .form fieldset .content .name .marks{
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .form .name.preference input{
+        width: 35px;
+    }
+    .options{
+        gap: 1rem;
+    }
+    .marks input[type=number]{
+        width: 90px;
+    }
+    .button{
+        font-size: 20px;
+        padding: 1rem;
+    }
+    .submit{
+        padding-top: 1rem;
+    }
+    .form select{
+        width: 185px;
+        font-size: 16px;
+    }
     .header h1{
         font-size: 40px;
     }
@@ -262,6 +323,9 @@ td img:hover{
     }
     .header{
         padding-top: 10px;
+    }
+    .welcome h2{
+        font-size: 24px;
     }
     .logout button{
         padding: 6px;
@@ -283,11 +347,41 @@ td img:hover{
     }
 }
 @media screen and (max-width:400px) {
+    .form legend{
+        font-size: 24px;
+    }
+    .form fieldset .content{
+        padding: 1rem;
+    }
+    .form fieldset .content .name{
+        font-size: 16px;
+    }
+    .form fieldset .content .name .marks{
+        font-size: 16px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 124px;
+        font-size: 12px;
+    }
+    .form select{
+        width: 124px;
+        font-size: 12px;
+    }
+    .form .name.preference input{
+        width: 30px;
+    }
+    .marks input[type=number]{
+        width: 68px;
+    }
     .header h1{
         font-size: 30px;
     }
     .header{
         padding-bottom: 10px;
+    }
+    .button{
+        font-size: 16px;
+        padding: 10px;
     }
     .header h2{
         padding-top: 1rem;
@@ -318,5 +412,22 @@ td img:hover{
     }
     table{
         border: none;
+    }
+}
+@media screen and (max-width:390px) {
+    .form{
+        padding: 0rem 1rem 1rem 1rem;
+    }
+    .form legend{
+        font-size: 24px;
+    }
+    .form input[type=text], .form input[type=number], .form input[type=email], .form input[type=date]{
+        width: 135px;
+    }
+    .form fieldset .content .name{
+        font-size: 18px;
+    }
+    .marks input[type=number]{
+        width: 76px;
     }
 }

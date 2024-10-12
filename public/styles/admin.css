@@ -154,6 +154,7 @@ tbody tr:hover {
 
 th {
     font-size: 1.1rem;
+    text-align: center;
     font-family: "Poppins",serif;
 }
 
@@ -167,4 +168,118 @@ td img{
 }
 td img:hover{
     transform: scale(1.1);
+}
+@media screen and (max-width:930px) {
+    .header h1{
+        font-size: 3rem;
+    }
+    .header h2{
+        font-size: 24px;
+    }
+    .navbar{
+        font-size: 19px;
+    }
+    .message p{
+        font-size: 24px;
+        padding: 2rem;
+    }
+    th{
+        font-size: 14px;
+    }
+    td{
+        font-size: 16px;
+    }
+    td img{
+        width: 25px;
+    }
+}
+@media screen and (max-width:806px) {
+    .navbar{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+    }
+    .nav1{
+        display: none;
+    }
+    #menu{
+        display: flex;
+        position: static;
+    }
+    .header{
+        padding: 2rem;
+    }
+    .logout{
+        font-size: 20px;
+        padding: 0px;
+    }
+    .student-table{
+        overflow: scroll;
+    }
+}
+@media screen and (max-width:638px) {
+    .header h1{
+        font-size: 45px;
+    }
+    .header h2{
+        font-size: 20px;
+    }
+    .message p{
+        padding-bottom: 1rem;
+    }
+}
+@media screen and (max-width:572px) {
+    .header{
+        padding: 20px;
+    }
+    .header h1{
+        font-size: 40px;
+    }
+    .navbar{
+        height: 35px;
+    }
+    .navbar svg{
+        height: 24px;
+        width: 24px;
+    }
+    .message p{
+        font-size: 20px;
+    }
+    td{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:480px) {
+    .header h1{
+        font-size: 35px;
+    }
+    .header h2{
+        font-size: 18px;
+        padding-top: 1rem;
+    }
+    .navbar{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .logout{
+        font-size: 18px;
+    }
+    .message p{
+        padding: 24px 24px 0px 24px;
+    }
+    th{
+        font-size: 12px;
+    }
+    th,td{
+        padding: 10px;
+    }
+    td{
+        font-size: 12px;
+    }
+    td img{
+        width: 21px;
+    }
 }

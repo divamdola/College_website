@@ -99,7 +99,7 @@
         <a href="#" class="nav">Campus</a>
       </div>
       <div class="login">
-        <a href="/logout" class="nav">Logout</a>
+        <a href="/logout" class="nav logout">Logout</a>
     </div>
       </div>
 </div>
@@ -150,10 +150,14 @@
                             <% } %>
                       </td>
                       <td>
-                        <img src="Images/tick.svg" alt="Approve" class="approve" data-id="<%= student[i].email %>">
+                        <div style="display: flex; justify-content: center; align-items: center;">
+                          <img src="Images/tick.svg" alt="Approve" class="approve" data-id="<%= student[i].email %>">
+                        </div>
                     </td>
                     <td>
+                      <div style="display: flex; justify-content: center; align-items: center;">
                         <img src="Images/wrong.svg" alt="Decline" class="decline" data-id="<%= student[i].email %>">
+                      </div>
                     </td>
                   </tr>
               <% } %>
@@ -163,6 +167,15 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+    var sidebar=document.querySelector(".sidebar");
+    var menu=document.querySelector(".menu");
+    var cancel=document.querySelector("#cancel");
+    menu.addEventListener("click",()=>{
+        sidebar.style.display="flex";
+    });
+    cancel.addEventListener("click",()=>{
+        sidebar.style.display="none";
+    });
   $(document).ready(function() {
     $('.approve').on('click', function() {
         const studentId = $(this).data('id');

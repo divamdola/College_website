@@ -109,7 +109,7 @@
                       <h4>Full Name :</h4>
                       <input type="text" name="full_name">
                     </div>
-                    <div class="name">
+                    <div class="name gender">
                       <label for="gender">Gender : </label>
                       <label for="choice1">Male</label>
                       <input type="radio" value="male" name="gender" id="choice1">
@@ -145,7 +145,7 @@
                     </div>
                     <div class="name preference">
                       <h4>Preferences :</h4>
-                      <div style="display: flex; align-items: center; gap: 3rem;">
+                      <div class="options">
                         <div class="cse">
                           <h4>CSE</h4>
                           <input type="number" name="cse">
@@ -163,11 +163,11 @@
                   <div class="content">
                     <div class="name">
                       <h4>Email :</h4>
-                      <input type="email" name="email">
+                      <input type="email" name="email" value="<%=result.email%>">
                     </div>
                     <div class="name">
                       <h4>Contact No :</h4>
-                      <input type="number" name="phone_no">
+                      <input type="number" name="phone_no" value="<%=result.contact%>">
                     </div>
                     <div class="name">
                       <h4>Permanent Address :</h4>
@@ -216,7 +216,7 @@
                         <input type="number" name="chemistry_12">
                       </div>
                       <div class="marks">
-                        <h4>Mathematics :</h4>
+                        <h4>Maths :</h4>
                         <input type="number" name="maths_12">
                       </div>
                       <div class="marks">
@@ -224,7 +224,7 @@
                         <input type="number" name="english_12">
                       </div>
                       <div class="marks">
-                        <h4>Computer Sci/Physical Ed :</h3>
+                        <h4>Optional :</h3>
                         <input type="number" name="elective_12">
                       </div>
                     </div>

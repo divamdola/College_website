@@ -393,7 +393,10 @@ video{
     .footer p{
         line-height: 18px;
     }
-    .login{
+    .log{
         padding: 0px;
+    }
+    .log:hover{
+        background-color: #757a79;
     }
 }
